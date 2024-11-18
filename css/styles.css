@@ -1,0 +1,205 @@
+/* Variables y configuración base */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --accent-primary: #3b82f6;
+    --accent-secondary: #60a5fa;
+}
+
+:root[class~="dark"] {
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --accent-primary: #60a5fa;
+    --accent-secondary: #3b82f6;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Transiciones */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navegación */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(to right, #60A5FA, #A855F7);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.glass-nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Header y responsividad */
+header {
+    padding-top: calc(4rem + 2rem);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding-top: calc(4rem + 1rem);
+    }
+}
+
+/* Proyectos */
+.proyecto {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+}
+
+.tooltip:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.tooltip:hover:before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-8px);
+}
+
+/* Banner de desarrollo */
+#devBanner {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Menú de idiomas */
+.lang-menu-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.lang-menu-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.lang-menu-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lang-menu-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+}
+#load-more-btn {
+    display: flex !important;
+    margin: 2rem auto;
+    z-index: 10;
+}
+
+#load-more-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+/* Estilos adicionales específicos para el blog */
+.article-content {
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+.article-content p {
+    margin-bottom: 1.5em;
+    line-height: 1.75;
+}
+
+.article-content h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.article-content img {
+    border-radius: 0.5rem;
+    margin: 2em 0;
+}
+
+.article-content ul, 
+.article-content ol {
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.article-content li {
+    margin-bottom: 0.5em;
+}
+
+.article-content blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1em;
+    margin: 1.5em 0;
+    font-style: italic;
+    color: #6b7280;
+}
+.article-content ul {
+list-style-type: disc;
+margin-left: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.article-content ol {
+list-style-type: decimal;
+margin-left: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.article-content li {
+margin-bottom: 0.5rem;
+}

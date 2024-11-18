@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "title": "Portfolio Website",
+            "category": "web",
+            "type": "Web Design",
+            "image": "/img/optimized/portfolio-banner-800.webp",
+            "description": "Design and implementation of a responsive Portfolio website, with a minimalist approach and automatic projects and Blog posts feed.",
+            "modalId": "modal1"
+        },
+        {
+            "id": "2",
+            "title": "Responsive Website",
+            "category": "web",
+            "type": "Web Design",
+            "image": "/img/optimized/web-design-800.webp",
+            "description": "Design and implementation of a responsive website for MindfulTech, with a minimalist approach and automatic image carousel.",
+            "modalId": "modal2"
+        },
+        {
+            "id": "3",
+            "title": "MegaLine Data Analysis",
+            "category": "data",
+            "type": "Data Analysis",
+            "image": "/img/optimized/user-beha-800.webp",
+            "description": "Statistical analysis of telecom plans focusing on user behavior and revenue optimization. Analysis of 500 users across multiple services.",
+            "modalId": "modal3"
+        },
+        {
+            "id": "4",
+            "title": "Bank App Re-Design",
+            "category": "ux",
+            "type": "UX Design",
+            "image": "/img/user-beha.jpeg",
+            "description": "Detailed analysis of user behavior in e-commerce platform to optimize conversion.",
+            "modalId": "modal4"
+        }
+    ]
+}

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MindfulTech - Encuentra el equilibrio entre la tecnología y tu bienestar mental. Ofrecemos soluciones y guía para un uso saludable de la tecnología.">
+    <meta name="keywords" content="salud mental, bienestar digital, tecnología, mindfulness, equilibrio digital, desconexión, hábitos saludables">
+    <meta name="author" content="MindfulTech">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindfultech.com/">
+    <meta property="og:title" content="MindfulTech - Bienestar Digital y Salud Mental">
+    <meta property="og:description" content="Encuentra el equilibrio entre la tecnología y tu bienestar mental.">
+    <meta property="og:image" content="path-to-your-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mindfultech.com/">
+    <meta property="twitter:title" content="MindfulTech - Bienestar Digital y Salud Mental">
+    <meta property="twitter:description" content="Encuentra el equilibrio entre la tecnología y tu bienestar mental.">
+    <meta property="twitter:image" content="path-to-your-image.jpg">
+
+    <title>MindfulTech - Bienestar Digital y Salud Mental</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="canonical" href="https://mindfultech.com/">
+    
+    <!-- Preload de fuentes -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+    <style>
+        :root {
+            --primary-color: #5B7FFF;
+            --secondary-color: #FFB17A;
+            --text-color: #2C3E50;
+            --background-color: #FFFFFF;
+            --accent-color: #E0E7FF;
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #5c7af1;
+            --secondary-color: #FFB17A;
+            --text-color: #bab6b6;
+            --background-color: #1A1A1A;
+            --accent-color: #2A2A2A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: var(--transition);
+        }
+
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .loader-content {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--accent-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+            background: linear-gradient(45deg, var(--accent-color), transparent);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 10px;
+            background: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            background: var(--background-color);
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .error-message {
+            color: #ff4646;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        footer {
+            background: var(--accent-color);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .carousel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .carousel::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+        z-index: 1;
+    }
+
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+
+    .carousel-slide.active {
+        opacity: 1;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 2;
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-button:hover {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    .carousel-button.prev {
+        left: 20px;
+    }
+
+    .carousel-button.next {
+        right: 20px;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 2;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .indicator.active {
+        background: white;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .carousel-button {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+        }
+
+        .indicator {
+            width: 8px;
+            height: 8px;
+        }
+    }
+     /* Estilos del menú móvil */
+     /* Estilos del menú móvil */
+     .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1000;
+    }
+
+    .mobile-menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--text-color);
+    }
+
+    @media (max-width: 768px) {
+        .mobile-menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            position: fixed;
+            left: -100%;
+            top: 0;
+            flex-direction: column;
+            background-color: var(--background-color);
+            width: 100%;
+            height: 100vh;
+            z-index: 999;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .nav-link {
+            font-size: 1.6rem;
+        }
+
+        .mobile-menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .mobile-menu-toggle.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .header {
+            background: var(--background-color) !important;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+    }
+
+    /* Ajustar la posición del toggle de tema en móvil */
+    @media (max-width: 768px) {
+        .theme-toggle {
+            margin-right: 1rem;
+        }
+
+        .nav {
+            padding: 0 1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-content"></div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">MindfulTech</a>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Cambiar tema">🌓</button>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-slide active">
+                        <img src="/images/mindfulness1.webp" alt="Persona meditando con tecnología" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/images/digital-wellness2.webp" alt="Espacio de trabajo equilibrado" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/images/mental-health3.webp" alt="Comunidad en bienestar digital" class="carousel-image">
+                    </div>
+                </div>
+                <button class="carousel-button prev" aria-label="Anterior">❮</button>
+                <button class="carousel-button next" aria-label="Siguiente">❯</button>
+                <div class="carousel-indicators"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Encuentra tu equilibrio digital</h1>
+                <p>Soluciones personalizadas para mejorar tu bienestar mental en la era digital</p>
+                <a href="#contacto" class="cta-button">Comienza tu viaje</a>
+            </div>
+        </section>
+
+        <section class="section" id="servicios">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Evaluación Digital</h3>
+                    <p>Análisis personalizado de tus hábitos digitales y su impacto en tu bienestar.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Mindfulness Digital</h3>
+                    <p>Aprende técnicas para usar la tecnología de manera consciente y saludable.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Desconexión Guiada</h3>
+                    <p>Programas estructurados para encontrar el balance entre conexión y descanso.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contacto">
+            <h2 class="section-title">Contáctanos</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="name" placeholder="Nombre" required>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" id="email" placeholder="Correo electrónico" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-input" id="message" placeholder="Mensaje" rows="5" required></textarea>
+                    <div class="error-message" id="message-error"></div>
+                </div>
+                <button type="submit" class="cta-button">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alain Nahle. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

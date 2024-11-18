@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+    <!-- Para diferentes dispositivos/tamaños -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+ <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6G35WLRSE"></script>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alain Nahle - Specialist in AI, UX Design, Data Analysis and Business Analysis. Professional portfolio with innovative projects and digital solutions.">
+    <meta name="keywords" content="Alain Nahle, Business AI, UX Design, Data Analysis, Business Analysis, Portfolio, Digital Projects">
+    <title>Alain Nahle - Portfolio</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alainnahle.com">
+    <meta property="og:title" content="Alain Nahle - Professional Portfolio">
+    <meta property="og:description" content="Business AI, Web Design, Data & Business Analysis">
+    <meta property="og:image" content="https://www.alainnahle.com/img/optimized/retia-800.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="https://www.alainnahle.com/img/social-media.png">
+    <meta property="twitter:url" content="https://www.alainnnahle.com">
+    <meta property="twitter:title" content="Alain Nahle - Professional Portfolio">
+    <meta property="twitter:description" content="Business AI, Web Design, Data & Business Analysis">
+    <meta property="twitter:image" content="https://www.alainnahle.com/img/social-media.png">
+    <!-- LinkedIn -->
+    <meta property="og:image" content="https://www.alainnahle.com/img/social-media.png" />
+
+    <title>Alain Nahle - Portfolio</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--Funcion Formulario Contacto-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 min-h-screen text-gray-900 dark:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-bold text-xl">AN</span>
+                </div>
+                
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Home</a>
+                        <a href="#certificates" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Latest Certificates</a>
+                        <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Projects</a>
+                        <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">About Me</a>
+                        <a href="#blog" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Blog</a>
+                        <a href="#contact" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200">Contact</a>
+                        <!-- Agregar en la navegación, justo antes del botón de tema -->
+                        <div class="relative">
+                            <button id="langButton" class="flex items-center space-x-1 text-gray-300 hover:text-purple-400 transition-colors duration-200 px-3 py-2">
+                                <span id="currentLang">ES</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div id="langMenu" class="absolute right-0 mt-2 w-24 bg-gray-800 rounded-lg shadow-lg py-1 hidden">
+                                <a href="index.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">Español</a>
+                                <a href="index-en.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">English</a>
+                            </div>
+                        </div>
+                        <button id="themeToggle" class="p-2 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <!-- Icono Sol (modo claro) -->
+                            <svg id="lightIcon" class="hidden w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                            <!-- Icono Luna (modo oscuro) -->
+                            <svg id="darkIcon" class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-300 hover:text-purple-400" onclick="toggleMobileMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Home</a>
+                <a href="#certificates" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Certificates</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Projects</a>
+                <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">About Me</a>
+                <a href="#blog" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Blog</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="min-h-screen flex flex-col justify-center items-center bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white p-8 pt-24">
+        <div class="max-w-4xl w-full space-y-8 text-center animate-fade-in">
+            <!-- Name Section -->
+            <h1 class="text-6xl font-bold tracking-tight mb-4">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                    Alain Nahle
+                </span>
+            </h1>
+            
+            <!-- Title/Role Section -->
+            <h2 class="text-2xl font-light text-gray-700 dark:text-gray-300">
+                Digital Innovation & Business Analysis
+            </h2>
+            
+            <!-- Expertise Areas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <!-- UX Design Card -->
+                <div class="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-auto mb-3 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/>
+                    </svg>
+                    <h3 class="font-medium text-lg">Web Design</h3>
+                    <p class="text-sm text-gray-400">User-centered digital experiences</p>
+                </div>
+                
+                <!-- AI Enterprise Card -->
+                <div class="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-auto mb-3 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08 2.5 2.5 0 0 0 4.91.05L12 20V4.5Z"/>
+                        <path d="M16 8V5c0-1.1.9-2 2-2"/>
+                        <path d="M12 13h4"/>
+                        <path d="M12 18h6a2 2 0 0 1 2 2v1"/>
+                    </svg>
+                    <h3 class="font-medium text-lg">Business IA</h3>
+                    <p class="text-sm text-gray-400">Intelligent solutions for business</p>
+                </div>
+                
+                <!-- Data Analysis Card -->
+                <div class="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-auto mb-3 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 21H4a2 2 0 0 1-2-2V3"/>
+                        <path d="M7 14l4-4 4 4 4-4"/>
+                    </svg>
+                    <h3 class="font-medium text-lg">Data Analysis</h3>
+                    <p class="text-sm text-gray-400">Data-driven Insights</p>
+                </div>
+                
+                <!-- Business Analysis Card -->
+                <div class="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-auto mb-3 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 7h-9"/>
+                        <path d="M14 17H5"/>
+                        <circle cx="17" cy="17" r="3"/>
+                        <circle cx="7" cy="7" r="3"/>
+                    </svg>
+                    <h3 class="font-medium text-lg">Business Analysis</h3>
+                    <p class="text-sm text-gray-400">Strategies for Business Success</p>
+                </div>
+            </div>
+            
+            <!-- Brief Description -->
+            <p class="text-lg dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mt-8">
+                Specialist in transforming business challenges into innovative solutions 
+            through UX design, artificial intelligence, and data analysis.
+            </p>
+            
+            <!-- Call to Action -->
+            <div class="flex justify-center gap-4 pt-8">
+                <a href="#projects" 
+                   class="px-4 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200">
+                    View Projects
+                </a>
+                <a href="#contact" 
+                   class="px-8 py-3 border border-gray-500 hover:border-blue-400 rounded-lg font-medium transition-colors duration-200 cursor-pointer">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </header>
+   <!--  Sección de Certificados 
+<section id="certificates" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                Latest Certificates
+            </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+             Certificado 1 
+            <div class="dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="/img/certificado-aden.png" alt="Certificado 1" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold dark:text-white mb-2">IA Certificate</h3>
+                    <p class="dark:text-gray-400 mb-4">Artificial Intelligence specialty & Machine Learning</p>
+                    
+                    <button onclick="downloadCertificate('/assets/rethink.pdf', 'rethink.pdf')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        <span>Download PDF</span>
+                    </button>
+                </div>
+            </div>
+
+             Certificado 2
+            <div class="dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="/img/certificado-google.png" alt="Certificado 2" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="dark:text-xl font-semibold dark:text-white mb-2">UX Design</h3>
+                    <p class="dark:text-gray-400 mb-4">User experience design Certificate</p>
+                    <button onclick="downloadCertificate('/assets/UX Design.pdf', 'UX Design.pdf')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        <span>Download PDF</span>
+                    </button>
+                </div>
+            </div>
+
+            Certificado 3 
+            <div class="dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="/img/certificado-harvard.png" alt="Certificado 3" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold dark:text-white mb-2">Business Analysis</h3>
+                    <p class="dark:text-gray-400 mb-4">Attracting and Cultivating Talent</p>
+                    <button onclick="downloadCertificate('/assets/attract-eng.pdf', 'attract-eng.pdf')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        <span>Download PDF</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- Sección de Proyectos -->
+<section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center mb-12">
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+        Latest Projects
+    </span>
+</h2>
+    <div id="projects-preview" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- El contenido se carga dinámicamente aquí -->
+    </div>
+</div>
+</section>
+<!-- Sección Sobre Mí (versión actualizada) -->
+<section id="about" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                About Me
+            </span>
+        </h2>
+
+        <div class="flex flex-col items-center max-w-3xl mx-auto text-center">
+            <!-- Imagen Circular Centrada -->
+            <div class="mb-12">
+                <div class="relative w-64 h-64 mx-auto mb-8">
+                    <!-- Círculo decorativo de fondo -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 animate-pulse blur-xl opacity-50"></div>
+                    <!-- Contenedor de la imagen -->
+                    <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl">
+                        <img 
+                            src="/img/optimized/alain-thumbnail-byn-800.webp" 
+                            alt="Alain Nahle" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="curriculum-vitae-en.html" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Curriculum Vitae
+                    </a>
+                </div><br>
+
+                <!-- Redes Sociales -->
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/alain-nahle/" class="tooltip text-gray-300 hover:text-gray-400 transition-colors duration-200" data-tooltip="Sígueme en LinkedIn">
+                        <!-- SVG de LinkedIn -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/nnahle01" class="tooltip text-gray-300 hover:text-gray-400 transition-colors duration-200" data-tooltip="Sígueme en GitHub">
+                        <!-- SVG de GitHub -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@alainnahle.com" class="tooltip text-gray-300 hover:text-gray-400 transition-colors duration-200" data-tooltip="Email Me">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Información -->
+            <div class="space-y-8 text-center">
+                <p class="text-lg leading-relaxed dark:text-gray-300">
+                    I am a professional passionate about technology and innovation, specializing in creating digital solutions that transform the way companies operate and connect with their users.
+                </p>
+                
+                <!-- Experiencia -->
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold dark:text-white mb-6">My Experience</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-4 bg-white dark:bg-gray-800/50 rounded-lg backdrop-blur-sm shadow-xl p-8">
+                            <div class="text-blue-400 mb-2">
+                                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium dark:text-white">Front-End Web Design</h4>
+                            <p class="text-sm dark:text-gray-400">User-centered digital experience design.</p>
+                        </div>
+
+                        <div class="p-4 bg-white dark:bg-gray-800/50 rounded-lg backdrop-blur-sm shadow-xl p-8">
+                            <div class="text-purple-400 mb-2">
+                                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium dark:text-white">AI Solutions Architect</h4>
+                            <p class="text-sm dark:text-gray-400">Development of AI solutions for optimization.</p>
+                        </div>
+
+                        <div class="p-4 bg-white dark:bg-gray-800/50 rounded-lg backdrop-blur-sm shadow-xl p-8">
+                            <div class="text-green-400 mb-2">
+                                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium dark:text-white">Data Analyst</h4>
+                            <p class="text-sm dark:text-gray-400">Data analysis for strategic decisions.</p>
+                        </div>
+                        <!--<div class="p-4 bg-white dark:bg-gray-800/50 rounded-lg backdrop-blur-sm shadow-xl p-8">
+                            <div class="text-green-400 mb-2">
+                                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium dark:text-white">AI Solutions Architect</h4>
+                            <p class="text-sm dark:text-gray-400">Desarrollo de soluciones de IA para optimización</p>
+                        </div>
+                        <div class="p-4 bg-white dark:bg-gray-800/50 rounded-lg backdrop-blur-sm shadow-xl p-8">
+                            <div class="text-blue-400 mb-2">
+                                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium dark:text-white">AI Solutions Architect</h4>
+                            <p class="text-sm dark:text-gray-400">Desarrollo de soluciones de IA para optimización</p>
+                        </div>
+                        <div class="p-4 bg-white dark:bg-gray-800/50 rounded-lg backdrop-blur-sm shadow-xl p-8">
+                            <div class="text-purple-400 mb-2">
+                                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium dark:text-white">AI Solutions Architect</h4>
+                            <p class="text-sm dark:text-gray-400">Desarrollo de soluciones de IA para optimización</p>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Section -->
+<section id="blog" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center mb-12">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+            Recent Stories
+        </span>
+    </h2>
+     <!-- Contenedor de posts -->
+    <div id="blog-preview" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- El contenido se carga dinámicamente aquí -->
+    </div>
+ <!-- Load More Button-->
+ <div id="load-more-container" class="text-center mt-12">
+    <button 
+        id="load-more-btn"
+        onclick="blogManager.handleLoadMore()"
+        class="mx-auto mt-8 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2"
+    >
+        <span>Load More Posts</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+    </button>
+    </div>
+</div>
+</section>
+<!-- Sección de Contacto -->
+<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                Contact
+            </span>
+        </h2>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8">
+            <form id="contactForm" class="space-y-6">
+                <!-- Estado del envío -->
+                <div id="formStatus" class="hidden">
+                    <div class="success hidden p-4 bg-green-600/20 border border-green-500 rounded-lg text-green-400 text-center">
+                        Message sent successfully. Thank you for contacting me!
+                    </div>
+                    <div class="error hidden p-4 bg-red-600/20 border border-red-500 rounded-lg text-red-400 text-center">
+                        There was an error sending the message. Please try again.
+                    </div>
+                </div>
+
+                <!-- Campos del formulario -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            required
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                            placeholder="Your full name"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                            placeholder="your@email.com"
+                        >
+                    </div>
+                </div>
+
+                <div>
+                    <label for="asunto" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                    <select 
+                        id="asunto" 
+                        name="asunto" 
+                        required
+                        class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                    >
+                        <option value="" disabled selected class="bg-gray-700">Please select an option</option>
+                        <option value="proyecto" class="bg-gray-700">IA Projects</option>
+                        <option value="consultoria" class="bg-gray-700">Consulting UX </option>
+                        <option value="analisis" class="bg-gray-700">Data Analysis</option>
+                        <option value="otro" class="bg-gray-700">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                    <textarea 
+                        id="mensaje" 
+                        name="mensaje" 
+                        rows="4" 
+                        required
+                        class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                        placeholder="Write your message here..."
+                    ></textarea>
+                </div>
+
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                >
+                    <span>Send Message</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+    <!--Footer -->
+<footer class="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Logo y Descripción -->
+            <div class="col-span-1 md:col-span-2">
+                <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">AN</span>
+                <p class="mt-4 text-gray-400">"Transforming ideas into innovative digital solutions through Web design, artificial intelligence, and data analysis."</p>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-200">Home</a></li>
+                    <li><a href="#certificates" class="text-gray-400 hover:text-white transition-colors duration-200">Certificates</a></li>
+                    <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-200">Projects</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-200">About Me</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3">Connect with Me!</h3>
+                <div class="flex space-x-4">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/alain-nahle/" class="tooltip text-gray-400 hover:text-white transition-colors duration-200" data-tooltip="Sígueme en LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/nnahle01" class="tooltip text-gray-400 hover:text-white transition-colors duration-200" data-tooltip="Sígueme en GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:contact@alainnahle.com" class="tooltip text-gray-400 hover:text-white transition-colors duration-200" data-tooltip="Email Me">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <!-- Banner provisional 
+    <div id="devBanner" class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 z-50 shadow-lg">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                </svg>
+                <p class="text-sm font-medium">🚧 Website under development - We're working to improve your experience</p>
+            </div>
+            <button onclick="closeBanner()" class="text-white hover:text-gray-200 transition-colors duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+    </div>-->
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 mt-12 pt-3 text-center text-gray-400">
+            <p>&copy; 2024 Alain Nahle. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <!-- Modal 1 -->
+<div id="modal1" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4">
+        <!-- Header del Modal -->
+        <div class="border-b border-gray-800 p-6 flex justify-between items-center">
+            <h3 class="text-2xl font-bold text-white">Portfolio Project</h3>
+            <button onclick="closeModal('modal1')" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Contenido del Modal -->
+        <div class="p-6 space-y-8">
+            <!-- Fase 1: Análisis -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-blue-400">1. Project Objectives</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <img src="/img/optimized/objective-400.webp" alt="Fase de Análisis" class="w-full h-full object-cover"/>
+                </div>
+                <p class="text-gray-300">Create a Portfolio website that promotes digital well-being and mental health through an intuitive and accessible interface for all users, ensuring compatibility with different devices and browsers.</p>
+            </div>
+
+            <!-- Fase 2: Desarrollo -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-purple-400">2. Website Development</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <img src="/img/optimized/develop-800.webp" alt="Fase de Desarrollo" class="w-full h-full object-cover"/>
+                </div>
+                <p class="text-gray-300"><strong>Structure:</strong><br><br>
+                    <strong>Semantic HTML & CSS Styles</strong><br> 
+                        - Navigation Header<br>
+                        - Main content<br>
+                        - Sections<br>
+                        - Footer<br><br>
+                   
+                   <strong>Developed Components:</strong><br><br>
+                1- Navigation System<br>
+                2- Projects and Blog sections based on JSON <br>
+                3- Theme System<br>
+                4- Contact Form<br>
+                5- Optimizations and Performance:<br>
+                6- SEO<br><br>
+                </p>
+            </div>
+
+            <!-- Fase 3: Implementación -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-green-400">3. Results and Implementation</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <img src="/img/optimized/portfolio-project-1200.webp" alt="Fase de Implementación" class="w-full h-full object-cover"/>
+                </div>
+                <p class="text-gray-300">"<strong>Development Environmental Setup</strong><br><br>
+                    1-Implementation of a Base Structure<br>
+                    2-Components Development<br>
+                    3-Integration of Features<br>
+                    4-Opimization & Test<br>
+                    5-Deployment<br>
+                    6-Testing in multiple Browsers<br>
+                    7-Usability Tests<br>
+                    8-Code W3C Validation</p>
+            </div>
+            
+            <!-- Tecnologías Utilizadas -->
+            <div class="border-t border-gray-800 pt-6">
+                <h4 class="text-lg font-semibold text-white mb-4">Technologies applied</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">HTML5</span>
+                    <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">CSS3</span>
+                    <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">JavaScript</span>
+                    <span class="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">Tailwind CSS</span>
+                    <span class="px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-sm">Fetch API</span>
+                    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-full text-sm">JSON</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer del Modal -->
+        <div class="border-t border-gray-800 p-6 flex justify-end">
+            <button onclick="closeModal('modal1')" class="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Modal 2 -->
+<div id="modal2" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4">
+        <!-- Header del Modal -->
+        <div class="border-b border-gray-800 p-6 flex justify-between items-center">
+            <h3 class="text-2xl font-bold text-white">MindfulTech Website</h3>
+            <button onclick="closeModal('modal2')" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Contenido del Modal -->
+        <div class="p-6 space-y-8">
+            <!-- Fase 1: Análisis -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-blue-400">1. Project Objectives</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <img src="/img/optimized/objective-800.webp" alt="Fase de Análisis" class="w-full h-full object-cover"/>
+                </div>
+                <p class="text-gray-300">Create a website that promotes digital well-being and mental health through an intuitive and accessible interface for all users, ensuring compatibility with different devices and browsers.</p>
+            </div>
+
+            <!-- Fase 2: Desarrollo -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-purple-400">2. Website Development</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <img src="/img/optimized/develop-800.webp" alt="Fase de Desarrollo" class="w-full h-full object-cover"/>
+                </div>
+                <p class="text-gray-300"><strong>Structure:</strong><br><br>
+                    <strong>Semantic HTML & CSS Styles</strong><br> 
+                        - Navigation Header<br>
+                        - Main content<br>
+                        - Sections<br>
+                        - Footer<br><br>
+                   
+                   <strong>Developed Components:</strong><br><br>
+                1- Navigation System<br>
+                2- Images Carousel <br>
+                3- Theme System<br>
+                4- Contact Form<br>
+                5- Optimizations and Performance:<br>
+                6- SEO<br><br>
+                </p>
+            </div>
+
+            <!-- Fase 3: Implementación -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-green-400">3. Results and Implementation</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <img src="/img/optimized/project1-800.webp" alt="Fase de Implementación" class="w-full h-full object-cover"/>
+                </div>
+                <p class="text-gray-300"><strong>Development Environmental Setup</strong><br><br>
+                    1-Implementation of a Base Structure<br>
+                    2-Components Development<br>
+                    3-Integration of Features<br>
+                    4-Opimization & Test<br>
+                    5-Deployment<br>
+                    6-Testing in multiple Browsers<br>
+                    7-Usability Tests<br>
+                    8-Code W3C Validation</p>
+            </div>
+            <div class="text-center mt-12">
+                <button onclick="window.location.href='demo-mindfulnes.html'" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center mx-auto space-x-2">
+                    <span>Visit our Demo Page!</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Tecnologías Utilizadas -->
+            <div class="border-t border-gray-800 pt-6">
+                <h4 class="text-lg font-semibold text-white mb-4">Tecnologías Utilizadas</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">HTML5</span>
+                    <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">CSS3</span>
+                    <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">JavaScript</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer del Modal -->
+        <div class="border-t border-gray-800 p-6 flex justify-end">
+            <button onclick="closeModal('modal2')" class="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                Cerrar
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Modal 3 -->
+<div id="modal3" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4">
+        <!-- Header del Modal -->
+        <div class="border-b border-gray-800 p-6 flex justify-between items-center">
+            <h3 class="text-2xl font-bold text-white">MegaLine Data Analysis</h3>
+            <button onclick="closeModal('modal3')" class="text-gray-400 hover:text-white transition-colors duration-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Contenido del Modal -->
+        <div class="p-6 space-y-8">
+            <!-- Fase 1: Análisis -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-blue-400">1. Data Analysis and Processing</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect width="300" height="200" fill="#1a2634"/>
+                        
+                        <!-- Grid lines -->
+                        <g stroke="#2a3f55" stroke-width="0.5">
+                          <line x1="40" y1="160" x2="40" y2="40"/>
+                          <line x1="40" y1="160" x2="260" y2="160"/>
+                          <line x1="40" y1="120" x2="260" y2="120"/>
+                          <line x1="40" y1="80" x2="260" y2="80"/>
+                          <line x1="40" y1="40" x2="260" y2="40"/>
+                        </g>
+                        
+                        <!-- Surf Plan Distribution -->
+                        <path d="M 40 160 
+                                 C 60 160, 70 140, 80 120
+                                 S 100 80, 120 70
+                                 S 140 60, 160 80
+                                 S 180 120, 200 140
+                                 S 220 160, 240 160"
+                              fill="none" stroke="#3b82f6" stroke-width="2"/>
+                        
+                        <!-- Ultimate Plan Distribution -->
+                        <path d="M 40 160
+                                 C 60 160, 70 130, 80 110
+                                 S 100 70, 120 65
+                                 S 140 70, 160 90
+                                 S 180 130, 200 150
+                                 S 220 160, 240 160"
+                              fill="none" stroke="#8b5cf6" stroke-width="2"/>
+                        
+                        <!-- Labels -->
+                        <text x="40" y="180" fill="#9ca3af" font-size="10">0</text>
+                        <text x="100" y="180" fill="#9ca3af" font-size="10">200</text>
+                        <text x="160" y="180" fill="#9ca3af" font-size="10">400</text>
+                        <text x="220" y="180" fill="#9ca3af" font-size="10">600</text>
+                        
+                        <!-- Y-axis labels -->
+                        <text x="20" y="160" fill="#9ca3af" font-size="10">0</text>
+                        <text x="15" y="120" fill="#9ca3af" font-size="10">100</text>
+                        <text x="15" y="80" fill="#9ca3af" font-size="10">200</text>
+                        <text x="15" y="40" fill="#9ca3af" font-size="10">300</text>
+                        
+                        <!-- Legend -->
+                        <circle cx="40" cy="20" r="4" fill="#3b82f6"/>
+                        <text x="50" y="23" fill="#9ca3af" font-size="10">Surf Plan</text>
+                        <circle cx="120" cy="20" r="4" fill="#8b5cf6"/>
+                        <text x="130" y="23" fill="#9ca3af" font-size="10">Ultimate Plan</text>
+                      </svg>
+                </div>
+                <p class="text-gray-300">Comprehensive analysis of user behavior across 500 Megaline customers. Processing and cleaning of over 300,000 
+                    records spanning calls, messages, and internet usage data across multiple datasets. Initial data enrichment 
+                    and preparation for statistical analysis.</p>
+            </div>
+
+            <!-- Fase 2: Desarrollo -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-purple-400">2. Usage Pattern Analysis</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect width="300" height="200" fill="#1a2634"/>
+                        
+                        <!-- Grid lines -->
+                        <g stroke="#2a3f55" stroke-width="0.5">
+                          <line x1="40" y1="160" x2="40" y2="40"/>
+                          <line x1="40" y1="160" x2="260" y2="160"/>
+                          <line x1="40" y1="120" x2="260" y2="120"/>
+                          <line x1="40" y1="80" x2="260" y2="80"/>
+                          <line x1="40" y1="40" x2="260" y2="40"/>
+                        </g>
+                        
+                        <!-- Messages trend -->
+                        <path d="M 40 155
+                                 L 60 150
+                                 L 80 145
+                                 L 100 130
+                                 L 120 110
+                                 L 140 90
+                                 L 160 70
+                                 L 180 60
+                                 L 200 50
+                                 L 220 45
+                                 L 240 40"
+                              fill="none" stroke="#3b82f6" stroke-width="2"/>
+                        
+                        <!-- Data usage trend -->
+                        <path d="M 40 150
+                                 L 60 120
+                                 L 80 100
+                                 L 100 90
+                                 L 120 85
+                                 L 140 80
+                                 L 160 80
+                                 L 180 80
+                                 L 200 80
+                                 L 220 80
+                                 L 240 80"
+                              fill="none" stroke="#8b5cf6" stroke-width="2"/>
+                        
+                        <!-- Month labels -->
+                        <text x="40" y="180" fill="#9ca3af" font-size="10">Jan</text>
+                        <text x="80" y="180" fill="#9ca3af" font-size="10">Mar</text>
+                        <text x="120" y="180" fill="#9ca3af" font-size="10">May</text>
+                        <text x="160" y="180" fill="#9ca3af" font-size="10">Jul</text>
+                        <text x="200" y="180" fill="#9ca3af" font-size="10">Sep</text>
+                        <text x="240" y="180" fill="#9ca3af" font-size="10">Nov</text>
+                        
+                        <!-- Legend -->
+                        <line x1="40" y1="20" x2="60" y2="20" stroke="#3b82f6" stroke-width="2"/>
+                        <text x="65" y="23" fill="#9ca3af" font-size="10">Messages</text>
+                        <line x1="120" y1="20" x2="140" y2="20" stroke="#8b5cf6" stroke-width="2"/>
+                        <text x="145" y="23" fill="#9ca3af" font-size="10">Data Usage</text>
+                      </svg>
+                </div>
+                <p class="text-gray-300">Statistical analysis of user behavior patterns revealed key insights: average monthly usage of 16GB data across both plans, 
+                    significant increase in messaging (0-45 messages/month), and similar calling patterns (～435 minutes/month) regardless of plan type. 
+                    Hypothesis testing confirmed significant differences in revenue generation between plans.</p>
+            </div>
+
+            <!-- Fase 3: Implementación -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold text-green-400">3. Results and Recommendations</h4>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect width="300" height="200" fill="#1a2634"/>
+                        
+                        <!-- Grid lines -->
+                        <g stroke="#2a3f55" stroke-width="0.5">
+                          <line x1="60" y1="160" x2="60" y2="40"/>
+                          <line x1="60" y1="160" x2="260" y2="160"/>
+                          <line x1="60" y1="120" x2="260" y2="120"/>
+                          <line x1="60" y1="80" x2="260" y2="80"/>
+                          <line x1="60" y1="40" x2="260" y2="40"/>
+                        </g>
+                      
+                        <!-- Surf Plan Bar -->
+                        <g>
+                          <rect x="100" y="90" width="40" height="70" fill="#3b82f6" opacity="0.8"/>
+                          <rect x="100" y="140" width="40" height="20" fill="#93c5fd"/>
+                        </g>
+                      
+                        <!-- Ultimate Plan Bar -->
+                        <g>
+                          <rect x="180" y="65" width="40" height="95" fill="#8b5cf6" opacity="0.8"/>
+                          <rect x="180" y="140" width="40" height="20" fill="#c4b5fd"/>
+                        </g>
+                        
+                        <!-- Labels -->
+                        <text x="105" y="185" fill="#9ca3af" font-size="12">Surf</text>
+                        <text x="180" y="185" fill="#9ca3af" font-size="12">Ultimate</text>
+                        
+                        <!-- Y-axis labels -->
+                        <text x="40" y="160" fill="#9ca3af" font-size="10">$0</text>
+                        <text x="35" y="120" fill="#9ca3af" font-size="10">$50</text>
+                        <text x="30" y="80" fill="#9ca3af" font-size="10">$100</text>
+                        <text x="30" y="40" fill="#9ca3af" font-size="10">$150</text>
+                        
+                        <!-- Legend -->
+                        <rect x="60" y="20" width="10" height="10" fill="#3b82f6" opacity="0.8"/>
+                        <text x="75" y="28" fill="#9ca3af" font-size="10">Extra Charges</text>
+                        <rect x="160" y="20" width="10" height="10" fill="#93c5fd"/>
+                        <text x="175" y="28" fill="#9ca3af" font-size="10">Base Fee</text>
+                      </svg>
+                </div>
+                <p class="text-gray-300">Ultimate plan generates higher average revenue ($119.32 vs $91.99) with lower variability. 42% of users exceed 
+                    plan limits in both plans, suggesting potential optimization opportunities. Recommendations include introducing an 
+                    intermediate plan and adjusting data limits based on observed usage patterns to optimize revenue generation.</p>
+            </div>
+
+            <!-- Tecnologías Utilizadas -->
+            <div class="border-t border-gray-800 pt-6">
+                <h4 class="text-lg font-semibold text-white mb-4">Technologies and Methodology used</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">Pandas</span>
+                    <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">Matplotlib</span>
+                    <span class="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-sm">SciPy</span>
+                    <span class="px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-sm">Seaborn</span>
+                    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-full text-sm">Hypothesis Testing</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer del Modal -->
+        <div class="border-t border-gray-800 p-6 flex justify-end">
+            <button onclick="closeModal('modal3')" class="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                Cerrar
+            </button>
+        </div>
+    </div>
+</div>
+<!--Back to Top-->
+<button id="backToTop" class="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg translate-y-20 opacity-0 transition-all duration-300 hover:bg-blue-700 focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+</button>
+<!--Main Scripts-->
+<script src="/js/content-loader.js"></script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>

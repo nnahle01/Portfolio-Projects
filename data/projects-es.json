@@ -1,0 +1,31 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "title": "Portfolio Website",
+            "category": "web",
+            "type": "Diseño Web",
+            "image": "/img/optimized/portfolio-banner-800.webp",
+            "description": "Diseño e implementación de una página web Portafolio, responsiva, minimalista y con elementos de blog y proyectos automatico.",
+            "modalId": "modal1"
+        },
+        {
+            "id": "2",
+            "title": "Website Responsivo",
+            "category": "web",
+            "type": "Diseño Web",
+            "image": "/img/optimized/web-design-800.webp",
+            "description": "Diseño e implementación de una página web para MindfulTech, responsiva, minimalista y con un carousel de imagenes automático.",
+            "modalId": "modal2"
+        },
+        {
+            "id": "3",
+            "title": "MegaLine Data Analysis",
+            "category": "data",
+            "type": "Data Analysis",
+            "image": "/img/optimized/user-beha-800.webp",
+            "description": "Análisis estadístico de planes de telecomunicaciones enfocado en el comportamiento de usuarios y optimización de ingresos.",
+            "modalId": "modal3"
+        }
+    ]
+}

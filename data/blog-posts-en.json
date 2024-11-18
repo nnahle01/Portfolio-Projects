@@ -1,0 +1,60 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "title": "The Digital Privacy Crisis",
+            "category": "Business Analytics",
+            "date": "Nov 17, 2024",
+            "image": "/img/optimized/digital-data-800.webp",
+            "excerpt": "Every click, every scroll, every hesitation of our cursor tells a story. Research from the Stanford Digital Privacy Project reveals...",
+            "url": "digital-privacy-crisis-en.html"
+        },
+        {
+            "id": "2",
+            "title": "Reducing Emissions Through Intelligent Algorithms",
+            "category": "Business AI",
+            "date": "Nov 11, 2024",
+            "image": "/img/optimized/retia-800.webp",
+            "excerpt": "In recent years, the integration of artificial intelligence into environmental sustainability efforts has marked a significant turning point in our...",
+            "url": "retia-en.html"
+        },
+        {
+            "id": "3",
+            "title": "Tesla and AI: The Digital Brain Revolutionizing Transportation",
+            "category": "Business AI",
+            "date": "Nov 03, 2024",
+            "image": "/img/optimized/tesla-ia-800.jpg",
+            "excerpt": "In the digital age, few technological advancements have captured the collective imagination like Tesla vehicles. More than just electric cars...",
+            "url": "tesla-and-IA-en.html"
+        },
+        {
+            "id": "4",
+            "title": "The Silent Revolution: How Data is Reshaping Our World",
+            "category": "Business AI",
+            "date": "Oct 26, 2024",
+            "image": "/img/optimized/DigitalWorld-400.jpg",
+            "excerpt": "Imagine for a moment the world just 30 years ago. Files were stored in physical cabinets, business decisions were primarily based on intuition...",
+            "url": "the-silent-revolution-en.html"
+           
+        },
+        {
+            "id": "5",
+            "title": "UX Design: The Invisible Art Transforming Our Digital Reality",
+            "category": "UX Design",
+            "date": "Oct 24, 2024",
+            "image": "/img/optimized/UX-future-800.webp",
+            "excerpt": "Discover the latest trends in user experience design that are defining the future of digital interfaces...",
+            "url": "the-invisible-art-en.html"
+        },
+        {
+            "id": "6",
+            "title": "The Power of Real-Time Predictive Analysis: Transforming Data",
+            "category": "Data Analysis",
+            "date": "Oct 22, 2024",
+            "image": "/img/optimized/Proyecto-DataAnalyst-800.webp",
+            "excerpt": "Unlike traditional batch analysis, this approach allows organizations to respond to opportunities and threats at the precise moment they arise...",
+            "url": "predictive-data-en.html"
+        }
+        
+    ]
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+    <!-- Para diferentes dispositivos/tamaños -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6G35WLRSE"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'G-X6G35WLRSE');
+ </script>
+    <!-- Header -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Poder del Análisis Predictivo en Tiempo Real | 2024</title>
+    <meta name="description" content="Descubre cómo el análisis predictivo en tiempo real está transformando la toma de decisiones empresariales, desde la detección de fraude hasta la personalización en tiempo real. Una exploración profunda de tecnologías, casos de uso y tendencias futuras.">
+    <meta name="keywords" content="análisis predictivo, tiempo real, big data, machine learning, IA, toma de decisiones, análisis de datos, tecnología empresarial">
+    <meta name="author" content="Alain Nahle">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.alainnahle.com/analisis-predictivo.html">
+    <meta property="og:title" content="El Poder del Análisis Predictivo en Tiempo Real: Transformando Datos en Decisiones Instantáneas">
+    <meta property="og:description" content="Explora cómo el análisis predictivo en tiempo real está revolucionando la toma de decisiones empresariales, con casos prácticos de Netflix, Amazon, y más.">
+    <meta property="og:image" content="https://www.alainnahle.com/img/Proyecto DataAnalyst.png">
+    <meta property="og:site_name" content="Alain Nahle">
+    <meta property="article:author" content="Alain Nahle">
+    <meta property="article:published_time" content="2024-10-22">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="El Poder del Análisis Predictivo en Tiempo Real | Alain Nahle">
+    <meta name="twitter:description" content="Explora cómo el análisis predictivo en tiempo real está revolucionando la toma de decisiones empresariales, con casos prácticos de Netflix, Amazon, y más.">
+    <meta name="twitter:image" content="https://www.alainnahle.com/img/Proyecto DataAnalyst.png">
+    <meta name="twitter:creator" content="@AlainNahle">
+    
+    <!-- Metadatos adicionales -->
+    <meta name="revisit-after" content="7 days">
+    <meta name="generator" content="Custom CMS">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <link rel="canonical" href="https://www.alainnahle.com/analisis-predictivo.html">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="bg-white dark:bg-gray-900 min-h-screen">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-bold text-xl">AN</span>
+                </div>
+                
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html#inicio" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Portafolio</a>
+                        <a href="index.html#certificados" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Certificados</a>
+                        <a href="index.html#proyectos" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Proyectos</a>
+                        <a href="index.html#sobre-mi" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Sobre Mí</a>
+                        <a href="index.html#blog" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Blog</a>
+                        <a href="index.html#contacto" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200">Contacto</a>
+                       
+                        <div class="relative">
+                            <button id="langButton" class="flex items-center space-x-1 text-gray-300 hover:text-purple-400 transition-colors duration-200 px-3 py-2">
+                                <span id="currentLang">ES</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div id="langMenu" class="absolute right-0 mt-2 w-24 bg-gray-800 rounded-lg shadow-lg py-1 hidden">
+                                <a href="analisis-predictivo.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">Español</a>
+                                <a href="predictive-data-en.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">English</a>
+                            </div>
+                        </div>
+                        <button id="themeToggle" class="p-2 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                            <!-- Icono Sol (modo claro) -->
+                            <svg id="lightIcon" class="hidden w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                            <!-- Icono Luna (modo oscuro) -->
+                            <svg id="darkIcon" class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-300 hover:text-purple-400" onclick="toggleMobileMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#inicio" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Portafolio</a>
+                <a href="index.html#certificados" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Certificados</a>
+                <a href="index.html#proyectos" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Proyectos</a>
+                <a href="index.html#sobre-mi" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Sobre Mí</a>
+                <a href="index.html#blog" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Blog</a>
+                <a href="index.html#contacto" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del Artículo -->
+    <article class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Cabecera del Artículo -->
+            <header class="mb-12">
+                <div class="flex flex-wrap items-center gap-4 mb-6">
+                    <span class="px-3 py-1 bg-blue-600/20 text-blue-500 dark:text-blue-400 rounded-full text-sm font-medium">
+                        Data Analysis
+                    </span>
+                    <time class="text-gray-600 dark:text-gray-400 text-sm">
+                        22 Octubre, 2024
+                    </time>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
+                    El Poder del Análisis Predictivo en Tiempo Real: Transformando Datos en Decisiones Instantáneas
+                </h1>
+
+                <div class="relative aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-2xl mb-8">
+                    <img 
+                        src="/img/optimized/Proyecto-DataAnalyst-800.webp"
+                        alt="Descripción de la imagen" 
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+            </header>
+
+            <!-- Contenido del Artículo -->
+            <div class="article-content text-gray-800 dark:text-gray-200">
+                
+                <p>En la era actual de la información, la capacidad de analizar datos y generar predicciones en tiempo real 
+                    se ha convertido en una ventaja competitiva crucial para las organizaciones. El análisis predictivo 
+                    en tiempo real representa la convergencia entre la velocidad del procesamiento instantáneo y la 
+                    profundidad del análisis predictivo tradicional.</p>
+                <h2>¿Qué es el Análisis Predictivo en Tiempo Real?</h2>
+                <p>El análisis predictivo en tiempo real es la práctica de capturar, procesar y analizar datos en el momento 
+                    exacto en que se generan, permitiendo tomar decisiones inmediatas basadas en predicciones algorítmicas. 
+                    A diferencia del análisis tradicional por lotes, este enfoque permite a las organizaciones responder a 
+                    oportunidades y amenazas en el momento preciso en que surgen.</p>
+                
+                <h2>Componentes Clave</h2>
+                <ol>
+                <h3><strong>Infraestructura de Datos en Tiempo Real</strong>
+                <ul>
+                <li>Sistemas de procesamiento de streams como Apache Kafka y Apache Flink, que pueden procesar millones de eventos por segundo</li>
+                <li>Bases de datos en memoria como Redis y MemSQL, capaces de realizar operaciones en microsegundos</li>
+                <li>Arquitecturas de baja latencia utilizando tecnologías como FPGA y procesamiento en GPU</li>
+                </ul>
+                <p>Por ejemplo, Netflix utiliza una arquitectura de streaming que procesa más de 450 mil millones de eventos 
+                diarios para realizar recomendaciones en tiempo real, empleando Apache Kafka como columna vertebral de su 
+                infraestructura.</p>
+                <h3><strong>Algoritmos y Modelos</strong><h3>
+                <ul>
+                <li>Modelos de aprendizaje automático adaptativo que se actualizan con cada nueva observación</li>
+                <li>Algoritmos de procesamiento incremental como árboles Hoeffding para clasificación en tiempo real</li>
+                <li>Técnicas de actualización continua de modelos mediante aprendizaje online</li>
+                </ul>
+                <p>Un caso ilustrativo es el sistema de precios dinámicos de Uber, que ajusta las tarifas cada 
+                    pocos segundos basándose en más de 100 variables en tiempo real.</p>
+                <h3><strong>Sistemas de Decisión Automatizada</strong></h3>                
+                <ul>
+                <li>Motores de reglas en tiempo real que procesan eventos complejos</li>
+                <li>Sistemas de recomendación instantáneos basados en comportamiento actual</li>
+                <li>Alertas y notificaciones automáticas con capacidad de auto-ajuste</li>
+                </ul>
+                <p>Amazon, por ejemplo, utiliza un sistema de decisión automatizada que ajusta más de 2.5 millones de precios cada día basándose en análisis en tiempo real.</p>
+                </ol>
+                <h2>Aplicaciones Prácticas</h2>
+                <h3><strong>Sector Financiero</strong></h3>
+                <ul>
+                <li>Detección de fraude en tiempo real mediante el análisis de patrones de transacciones, ubicación geográfica y comportamiento del usuario. Por ejemplo, Visa procesa más de 65,000 transacciones por segundo, evaluando cada una en busca de indicadores de fraude en menos de un milisegundo.</li>
+                <li>Trading algorítmico que ejecuta miles de operaciones por segundo basándose en análisis predictivo de mercados, noticias y sentimiento social.</li>
+                <li>Evaluación instantánea de riesgos crediticios utilizando cientos de variables en tiempo real, incluyendo historial de transacciones y comportamiento de navegación.</li>
+                </ul>
+                <h3><strong>Retail</strong></h3>
+                <ul>
+                <li>Personalización dinámica de precios que considera inventario, demanda, competencia y factores estacionales en tiempo real.</li>
+                <li>Recomendaciones en tiempo real basadas en el comportamiento de navegación actual, historial de compras y tendencias del mercado.</li>
+                <li>Gestión de inventario predictiva que anticipa demanda y optimiza la cadena de suministro. Walmart, por ejemplo, utiliza análisis predictivo en tiempo real para gestionar el inventario de más de 100,000 productos en cada tienda.</li>
+                </ul>
+                <h3><strong>Manufactura</strong></h3>
+                <ul>
+                <li>Mantenimiento predictivo utilizando sensores IoT que monitorizan equipos 24/7 y predicen fallos antes de que ocurran.</li>
+                <li>Control de calidad en tiempo real mediante visión artificial y análisis de datos de sensores.</li>
+                <li>Optimización de procesos productivos que ajusta parámetros de producción en tiempo real basándose en condiciones actuales.</li>
+                </ul>
+                <h2>Desafíos y Consideraciones</h2>
+                <ol>
+                <li><strong>Calidad de Datos</strong>
+                <ul>
+                <li>Validación en tiempo real mediante reglas dinámicas y aprendizaje automático</li>
+                <li>Gestión de datos incompletos utilizando técnicas de imputación en tiempo real</li>
+                <li>Limpieza de datos sobre la marcha con algoritmos de detección de anomalías</li>
+                </ul>
+                <p>Un ejemplo práctico es cómo Twitter procesa más de 500 millones de tweets diarios, 
+                    filtrando spam y contenido inapropiado en tiempo real mientras mantiene la integridad de los datos para 
+                    análisis.</p>
+                <h3><strong>Rendimiento y Escalabilidad</strong>
+                <ul>
+                <li>Latencia y throughput optimizados mediante arquitecturas distribuidas</li>
+                <li>Recursos computacionales gestionados dinámicamente en la nube</li>
+                <li>Balanceo de carga inteligente basado en predicción de demanda</li>
+                </ul>
+                <p>Google Cloud procesa más de 40 petabytes de datos por día, manteniendo una latencia 
+                    inferior a 100 milisegundos en sus servicios de análisis en tiempo real.</p>
+                <li><strong>Precisión vs. Velocidad</strong>
+                <ul>
+                <li>Compromiso entre exactitud y tiempo de respuesta mediante modelos adaptativos</li>
+                <li>Estrategias de optimización utilizando técnicas de procesamiento paralelo</li>
+                <li>Validación continua de modelos con métricas de rendimiento en tiempo real</li>
+                </ul>
+                </li>
+                </ol>
+                <h2>Mejores Prácticas</h2>
+                <ol>
+                <li>Implementar monitoreo continuo de modelos mediante dashboards en tiempo real y alertas automatizadas. 
+                    Por ejemplo, establecer umbrales de rendimiento y precisión que, al ser superados, activen revisiones 
+                    automáticas del modelo.</li>
+                <li>Establecer pipelines de datos robustos con redundancia y recuperación automática. Netflix, por ejemplo, 
+                    utiliza el principio de "chaos engineering" para probar continuamente la resistencia de sus sistemas.</li>
+                <p>Desarrollar estrategias de fallback multicapa que incluyan:</p>
+                <ul>
+                <li>Modelos simplificados de respaldo</li>
+                <li>Caché de predicciones recientes</li>
+                <li>Reglas de negocio predefinidas</li>
+                </ul>
+                </li>
+                <p>Mantener un equilibrio entre automatización y supervisión humana mediante:</p>
+                <ul>
+                <li>Paneles de control en tiempo real</li>
+                <li>Sistemas de alerta inteligentes</li>
+                <li>Protocolos de escalamiento claros</li>
+                </ul>
+                </li>
+                <p>Documentar y versionar modelos y decisiones utilizando:</p>
+                <ul>
+                <li>Sistemas de control de versiones para modelos</li>
+                <li>Registros detallados de cambios y actualizaciones</li>
+                <li>Trazabilidad completa de decisiones automatizadas</li>
+                </ul>
+                </li>
+                </ol>
+                <h2>El Futuro del Análisis Predictivo en Tiempo Real</h2>
+                <ul>
+                <li>Integración con Edge Computing, permitiendo procesamiento predictivo directamente en dispositivos IoT. 
+                    Por ejemplo, los vehículos autónomos ya están comenzando a realizar análisis 
+                    predictivo en tiempo real sin necesidad de conexión constante a la nube.</li>
+                <li>Adopción de técnicas de AutoML en tiempo real, donde los modelos no solo se ejecutan sino que se entrenan y 
+                    optimizan automáticamente. Google está desarrollando sistemas que pueden ajustar y reentrenar 
+                    modelos automáticamente basándose en nuevos datos.</li>
+                <li>Mayor personalización y contextualización mediante la integración de datos de múltiples fuentes. 
+                    Amazon está experimentando con sistemas que combinan datos de comportamiento online, ubicación física y 
+                    contexto social para predicciones ultra-personalizadas.</li></ul>
+                <p>Evolución hacia sistemas completamente autónomos que pueden:</p>
+                <ul>
+                <li>Auto-diagnosticarse y repararse</li>
+                <li>Adaptar sus estrategias predictivas</li>
+                <li>Optimizar su propio rendimiento</li>
+                <li>Colaborar con otros sistemas autónomos</li>
+                </ul>
+                
+                <h2>Conclusión</h2>
+                <p>El análisis predictivo en tiempo real está revolucionando la forma en que las organizaciones toman decisiones 
+                    y responden a cambios en su entorno. A medida que la tecnología continúa evolucionando, las 
+                    empresas que dominen esta capacidad estarán mejor posicionadas para prosperar en un mundo cada vez 
+                    más dinámico y competitivo.</p>
+
+                <!-- Quote -->
+                <blockquote>
+                    "El análisis predictivo en tiempo real no solo nos permite ver el futuro, 
+        sino que nos da el poder de moldearlo. Cada dato es una oportunidad para 
+        tomar decisiones más inteligentes y crear un impacto positivo en el mundo."
+                    <p><i>-Alain Nahle</i><br><br>
+                        Business and Data Analyst | Estratega Digital</p>
+                
+                </blockquote>
+                
+            </div>
+
+            <!-- Pie del Artículo -->
+            <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                <!-- Autor -->
+                <div class="flex items-center space-x-4 mb-8">
+                    <img 
+                        src="/img/optimized/alain-thumbnail-byn-800.webp" 
+                        alt="Alain Nahle" 
+                        class="w-16 h-16 rounded-full"
+                    />
+                    <div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Alain Nahle</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Business and Data Analytics | Artificial Intelligence | Web Design</p>
+                    </div>
+                </div>
+
+                <!-- Navegación entre artículos -->
+                <div class="flex justify-between items-center">
+                    <a href="index.html#blog" class="text-blue-500 hover:text-blue-600 transition-colors duration-200">
+                        ← Regresar a Historias
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <!-- Footer-->
+    <footer class="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Logo y Descripción -->
+            <div class="col-span-1 md:col-span-2">
+                <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">AN</span>
+                <p class="mt-4 text-gray-400">Transformando ideas en soluciones digitales innovadoras mediante el diseño UX, inteligencia artificial y análisis de datos.</p>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3">Enlaces Rápidos</h3>
+                <ul class="space-y-1">
+                    <li><a href="#home-esp" class="text-gray-400 hover:text-white transition-colors duration-200">Portafolio</a></li>
+                    <li><a href="#certificados" class="text-gray-400 hover:text-white transition-colors duration-200">Certificados</a></li>
+                    <li><a href="#proyectos" class="text-gray-400 hover:text-white transition-colors duration-200">Proyectos</a></li>
+                    <li><a href="#sobre-mi" class="text-gray-400 hover:text-white transition-colors duration-200">Sobre Mí</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3">Conecta Conmigo</h3>
+                <div class="flex space-x-4">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/alain-nahle/" class="tooltip text-gray-400 hover:text-white transition-colors duration-200" data-tooltip="Sígueme en LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/nnahle01" class="tooltip text-gray-400 hover:text-white transition-colors duration-200" data-tooltip="Sígueme en GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:contact@alainnahle.com" class="tooltip text-gray-400 hover:text-white transition-colors duration-200" data-tooltip="Email Me">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 mt-12 pt-3 text-center text-gray-400">
+            <p>&copy; 2024 Alain Nahle. Todos los derechos reservados.</p>
+        </div>
+    </div>
+    </footer>
+
+   <!--Back to Top-->
+<button id="backToTop" class="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg translate-y-20 opacity-0 transition-all duration-300 hover:bg-blue-700 focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+</button>
+<!--Scripts-->
+<script src="/js/article-scripts.js"defer></script>
+</body>
+</html>

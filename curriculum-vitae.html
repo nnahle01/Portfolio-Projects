@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles-cv.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="CV de Alain Nahle - Especialista en IA, UX Design, Data Analysis y Business Analysis">
+    <meta name="keywords" content="Alain Nahle, CV, IA, UX Design, Data Analysis, Business Analysis">
+    <meta name="author" content="Alain Nahle">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alainnahle.com">
+    <meta property="og:title" content="Alain Nahle - Curriculum Vitae">
+    <meta property="og:description" content="Especialista en IA, UX Design, Data Analysis y Business Analysis">
+    <meta property="og:image" content="https://www.alainnahle.com/img/social-media.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="/img/social-media.png">
+    <meta property="twitter:url" content="https://www.alainnahle.com">
+    <meta property="twitter:title" content="Alain Nahle - Portfolio Profesional">
+    <meta property="twitter:description" content="Business AI, UX Design, Data & Business Analysis">
+    <meta property="twitter:image" content="https://www.alainnahle.com/img/social-media.png">
+    <!-- LinkedIn -->
+    <meta property="og:image" content="https://www.alainnahle.com/img/social-media.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+
+    <title>Alain Nahle - CV</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {},
+          }
+        };
+      </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Prevenir flash de tema incorrecto
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 min-h-screen text-gray-900 dark:text-white">
+    
+    <!-- Header con navegación -->
+    <header class="fixed w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg">
+        <nav class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-bold text-xl">AN</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Portafolio</a>
+                    <a href="#experiencia" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Experiencia</a>
+                    <a href="#educacion" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Educación</a>
+                    <a href="#habilidades" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Habilidades</a>
+                    
+                    <!-- Language Selector -->
+                    <div class="relative">
+                        <button id="langButton" class="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-purple-400 transition-colors duration-200">
+                            <span id="currentLang">ES</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="langMenu" class="absolute right-0 mt-2 w-24 bg-gray-800 rounded-lg shadow-lg py-1 hidden">
+                            <a href="curriculum-vitae.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">Español</a>
+                            <a href="curriculum-vitae-en.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">English</a>
+                        </div>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200">
+                        <!-- Icono Sol (modo claro) -->
+                        <svg id="lightIcon" class="hidden w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <!-- Icono Luna (modo oscuro) -->
+                        <svg id="darkIcon" class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 dark:text-gray-300 hover:text-purple-400" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="nav-link block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Portafolio</a>
+                    <a href="#experiencia" class="nav-link block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Experiencia</a>
+                    <a href="#educacion" class="nav-link block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Educación</a>
+                    <a href="#habilidades" class="nav-link block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">Habilidades</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="pt-24 pb-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Información Personal -->
+            <section class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                        Alain Nahle
+                    </span>
+                </h1>
+                <h2 class="text-xl text-gray-700 dark:text-gray-300 mb-4">Innovación Digital & Análisis Empresarial</h2>
+                <div class="flex flex-wrap justify-center gap-4 text-gray-600 dark:text-gray-400">
+                    <a href="mailto:contact@alainnahle.com" class="text-blue-500 hover:text-blue-400 hover:underline transition-all duration-200" data-tooltip="Email Me">📧 contact@alainnahle.com</a>
+                    
+                    <span>📍 Monterrey, México</span>
+                </div>
+            </section>
+
+            <!-- Experiencia -->
+            <section id="experiencia" class="mb-12 scroll-mt-20">
+                <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                    Experiencia Profesional
+                </h3>
+                <div class="space-y-6">
+                    <!-- Trabajo 1 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                        <h4 class="font-semibold text-lg mb-2">Client Support Analyst (remote)</h4>
+                        <div class="text-gray-600 dark:text-gray-400 mb-2">Q4 Inc. • Octubre 2022 - Agosto 2024</div>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>En Q4 Inc, fuí responsable de atender las solicitudes de clientes para actualizar
+                                archivos y resultados trimestrales en los sitios web correspondientes al área de
+                                Relaciones de Inversionistas (IR), configurar usuarios del sitio y comunicación con el
+                                cliente a través de email o teléfono. Durante mi trayectoria dentro de la empresa me
+                                destaque en la pronta resolución de solicitudes de nuestros clientes, en cada
+                                interacción me esforcé para garantizar el máximo nivel de satisfacción de los clientes.</li>
+                            <li>Logré una calificación de 4.8 de 5 en CSAT.</li>
+                            <li>Eventualmente fuí responsable de realizar shadowing y entrenamiento suave a nuevos elementos para responder dudas 
+                                a través del canal de soporte en Slack y videoconferencia, también fuí responsable de resolver problemas que mis 
+                                compañeros podían enfrentar al intentar resolver alguna solicitud de clientes.</li>
+                        </ul>
+                    </div>
+                      <!-- Trabajo 2 -->
+                      <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                        <h4 class="font-semibold text-lg mb-2">Associate Software Engineer (remote)</h4>
+                        <div class="text-gray-600 dark:text-gray-400 mb-2">Hexaware Technologies • Agosto 2021 - Octubre 2022</div>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Mi responsabilidad dentro Hexaware fue la atención del cliente a través de teléfono y
+                                email, mi principal función fue la de garantizar que el software de McAfee funcionara
+                                correctamente y solucionar problemas de configuración e instalaciones del software.</li>
+                                <li>Logré una calificación de 5 estrellas en CSAT.</li>
+                            <li>Eventualmente fuí responsable de ayudar a mis compañeros a resolver dudas y problemas 
+                                que enfrentaban al resolver las solicitudes de clientes.</li>
+                        </ul>
+                    </div>
+                    <!-- Trabajo 3 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                        <h4 class="font-semibold text-lg mb-2">Customer Service Representative (in site)</h4>
+                        <div class="text-gray-600 dark:text-gray-400 mb-2">Sitel • Noviembre 2018 - Marzo 2020</div>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>En Sitel mi responsabilidad fue atender las preguntas y solicitudes de servicio y soporte para
+                                clientes XFinity y posteriormente para clientes de SMA Australia.</li>
+                            <li>Logré una calificación de 4 estrellas en CSAT.</li>
+                            <li>Eventualmente fuí responsable de ayudar a mis compañeros a resolver dudas y problemas 
+                                que enfrentaban al resolver las solicitudes de clientes.</li>
+                        </ul>
+                    </div>
+                     <!-- Trabajo 4 -->
+                     <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                        <h4 class="font-semibold text-lg mb-2">Propietario</h4>
+                        <div class="text-gray-600 dark:text-gray-400 mb-2">Laps Center • Julio 2008 - Noviembre 2020</div>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Como propietario de Laps Center, fui responsable de atender las solicitudes de los clientes para 
+                                reparar computadoras Apple y Microsoft, desarrollar sitios web utilizando HTML y CSS, y configurar, 
+                                diseñar, instalar y brindar soporte a redes.Mis clientes eran principalmente corporaciones privadas de alto nivel y el público en general.</li>
+                            <li>Logré un excelente nivel de interacción con los clientes, su lealtad se basaba en el servicio prestado, más que en el precio.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educación -->
+            <section id="educacion" class="mb-12 scroll-mt-20">
+                <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                    Educación
+                </h3>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <h4 class="font-semibold text-lg mb-2">Master in Business Analysis</h4>
+                    <div class="text-gray-600 dark:text-gray-400">ESDEN Business School | QBit • Oct 2024 - Presente</div>
+                    <h4 class="font-semibold text-lg mb-2">UX Design</h4>
+                    <div class="text-gray-600 dark:text-gray-400">Google | Coursera • Oct 2024 - Presente</div>
+                    <h4 class="font-semibold text-lg mb-2">Data Analyst</h4>
+                    <div class="text-gray-600 dark:text-gray-400">TripleTen • Sept 2024 - Presente</div>
+                    <h4 class="font-semibold text-lg mb-2">Major in Business AI</h4>
+                    <div class="text-gray-600 dark:text-gray-400">ADEN Business School • Aug 2024 - Presente</div>
+                    <h4 class="font-semibold text-lg mb-2">HighSchool</h4>
+                    <div class="text-gray-600 dark:text-gray-400">Centro de Estudios Universitarios • Aug 1989 - June 1991</div>
+                </div>
+            </section>
+            <!-- Certificaciones -->
+            <section id="certificates" class="mb-12 scroll-mt-20">
+                <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                    Certifications
+                </h3>
+                <div class="flex flex-col gap-4 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <h4 class="font-semibold text-lg mb-2">Gestión de Tiempo</h4>
+                    <div class="text-gray-600 dark:text-gray-400">Harvard Business Publishing • Nov 2024</div>
+                    <a class="text-blue-500 hover:text-blue-400 hover:underline transition-all duration-200" href="/assets/time_management.pdf" target="_blank">See Certificate</a>
+                    <h4 class="font-semibold text-lg mb-2">Monitoreo e Implementacion de Proyectos de IA</h4>
+                    <div class="text-gray-600 dark:text-gray-400">ADEN Business School • Nov 2024</div>
+                    <a class="text-blue-500 hover:text-blue-400 hover:underline transition-all duration-200" href="/assets/Implementacion de Proyectos IA.pdf" target="_blank">See Certificate</a>
+                    <h4 class="font-semibold text-lg mb-2">Foundations of User Experience</h4>
+                    <div class="text-gray-600 dark:text-gray-400">Google | Coursera • Oct 2024</div>
+                    <a class="text-blue-500 hover:text-blue-400 hover:underline transition-all duration-200" href="/assets/UX Design Foundations Cert..pdf" target="_blank">See Certificate</a>
+                    <h4 class="font-semibold text-lg mb-2">Gestión del Big Data y Etica: Bases para la IA</h4>
+                    <div class="text-gray-600 dark:text-gray-400">ADEN Business School • Oct 2024</div>
+                    <a class="text-blue-500 hover:text-blue-400 hover:underline transition-all duration-200" href="/assets/gestion-de-BD.pdf" target="_blank">See Certificate</a>
+                    <h4 class="font-semibold text-lg mb-2">Atraer y Cultivar Talento</h4>
+                    <div class="text-gray-600 dark:text-gray-400">Harvard Business Publishing • Sept 2024</div>
+                    <a class="text-blue-500 hover:text-blue-400 hover:underline transition-all duration-200" href="/assets/attract-eng.pdf" target="_blank">See Certificate</a>
+                    <h4 class="font-semibold text-lg mb-2">Taller de Aprendizaje Profundo</h4>
+                    <div class="text-gray-600 dark:text-gray-400">ADEN Business School • Sep 2024</div>
+                    <a class="text-blue-500 hover:text-blue-400 hover:underline transition-all duration-200" href="/assets/aprendizaje-profundo.pdf" target="_blank">See Certificate</a>
+                </div>
+            </section>
+
+            <!-- Habilidades -->
+            <section id="habilidades" class="mb-12 scroll-mt-20">
+                <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                    Habilidades
+                </h3>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-full">HTML5</span>
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-600 dark:text-purple-400 rounded-full">CSS3</span>
+                        <span class="px-3 py-1 bg-green-600/20 text-green-600 dark:text-green-400 rounded-full">JavaScript</span>
+                        <span class="px-3 py-1 bg-yellow-600/20 text-yellow-600 dark:text-yellow-400 rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-red-600/20 text-red-600 dark:text-red-400 rounded-full">Data and Business Analysis</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-full">SalesForce</span>
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-600 dark:text-purple-400 rounded-full">Business AI</span>
+                        <span class="px-3 py-1 bg-green-600/20 text-green-600 dark:text-green-400 rounded-full">Power BI</span>
+                        <span class="px-3 py-1 bg-yellow-600/20 text-yellow-600 dark:text-yellow-400 rounded-full">Tableau</span>
+                        <span class="px-3 py-1 bg-red-600/20 text-red-600 dark:text-red-400 rounded-full">SCRUM</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-full">Visual Studio</span>
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-600 dark:text-purple-400 rounded-full">Risk Analysis</span>
+                        <span class="px-3 py-1 bg-green-600/20 text-green-600 dark:text-green-400 rounded-full">Agile Management</span>
+                    </div>
+                </div>
+            </section>
+            <section id="soft-skills" class="mb-12 scroll-mt-20">
+                <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                   Soft Skills
+                </h3>
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-full">Comumicación Efectiva</span>
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-600 dark:text-purple-400 rounded-full">Responsabilidad</span>
+                        <span class="px-3 py-1 bg-green-600/20 text-green-600 dark:text-green-400 rounded-full">Negociación</span>
+                        <span class="px-3 py-1 bg-yellow-600/20 text-yellow-600 dark:text-yellow-400 rounded-full">Trabajo en Equipo</span>
+                        <span class="px-3 py-1 bg-red-600/20 text-red-600 dark:text-red-400 rounded-full">Ëtica</span>
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-600 dark:text-purple-400 rounded-full">Solución de Conflictos</span>
+                        <span class="px-3 py-1 bg-yellow-600/20 text-yellow-600 dark:text-yellow-400 rounded-full">English C2</span>
+                        <span class="px-3 py-1 bg-red-600/20 text-red-600 dark:text-red-400 rounded-full">Spanish</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-600 dark:text-blue-400 rounded-full">Employee Engagement</span>
+                        <span class="px-3 py-1 bg-green-600/20 text-green-600 dark:text-green-400 rounded-full">Liderazgo</span>
+                        <span class="px-3 py-1 bg-yellow-600/20 text-yellow-600 dark:text-yellow-400 rounded-full">Adaptabilidad</span>
+                        <span class="px-3 py-1 bg-red-600/20 text-red-600 dark:text-red-400 rounded-full">Active Listening</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Botón de impresión -->
+    <div class="fixed bottom-8 right-8">
+        <button onclick="window.print()" class="p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/theme.js"></script>
+    <script src="/js/language.js"></script>
+    <script src="/js/mobile-menu.js"></script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

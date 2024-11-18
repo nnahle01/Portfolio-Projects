@@ -1,0 +1,58 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "title": "La Crisis de la Privacidad Digital",
+            "category": "Analítica Empresarial",
+            "date": "Nov 17, 2024",
+            "image": "/img/optimized/digital-data-800.webp",
+            "excerpt": "Cada clic, cada desplazamiento, cada duda de nuestro cursor cuenta una historia. Solo en 2023, las empresas recolectaron un promedio de...",
+            "url": "digital-privacy-crisis-es.html"
+        },
+        {
+            "id": "2",
+            "title": "Reducción de Emisiones Mediante Algoritmos Inteligentes",
+            "category": "AI Empresarial",
+            "date": "Nov 11, 2024",
+            "image": "/img/optimized/retia-800.webp",
+            "excerpt": "En los últimos años, la integración de la inteligencia artificial en los esfuerzos de sostenibilidad ambiental ha marcado un punto de inflexión significativo en nuestra...",
+            "url": "retia-es.html"
+        },
+        {
+            "id": "3",
+            "title": "Tesla y la IA: El Cerebro Digital que Revoluciona el Transporte",
+            "category": "IA Empresarial",
+            "date": "03 Nov 2024",
+            "image": "/img/optimized/tesla-ia-800.jpg",
+            "excerpt": "En la era digital, pocos avances tecnológicos han capturado la imaginación colectiva como los vehículos Tesla...",
+            "url": "tesla-y-la-IA.html"
+        },
+        {
+            "id": "4",
+            "title": "La Revolución Silenciosa: Cómo los Datos Están Remodelando Nuestro Mundo",
+            "category": "IA Empresarial",
+            "date": "26 Oct 2024",
+            "image": "/img/optimized/DigitalWorld-400.jpg",
+            "excerpt": "Imagina por un momento el mundo de hace apenas 30 años. Los archivos se guardaban en gabinetes físicos, las decisiones empresariales se basaban principalmente en intuición...",
+            "url": "la-revolucion-silenciosa.html"
+        },
+        {
+            "id": "5",
+            "title": "UX Design: El Arte Invisible que Transforma Nuestra Realidad Digital",
+            "category": "UX Design",
+            "date": "24 Oct 2024",
+            "image": "/img/optimized/UX-future-800.webp",
+            "excerpt": "Encuentra las últimas tendencias en diseño de experiencia de usuario que están definiendo el futuro de las interfaces digitales...",
+            "url": "el-arte-invisible.html"
+        },
+        {
+            "id": "6",
+            "title": "El Poder del Análisis Predictivo en Tiempo Real: Transformando Datos",
+            "category": "Data Analysis",
+            "date": "22 Oct 2024",
+            "image": "/img/optimized/Proyecto-DataAnalyst-800.webp",
+            "excerpt": "A diferencia del análisis tradicional por lotes, este enfoque permite a las organizaciones responder a oportunidades y amenazas en el momento preciso en que surgen...",
+            "url": "analisis-predictivo.html"
+        }
+    ]
+}
